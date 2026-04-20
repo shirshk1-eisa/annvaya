@@ -23,7 +23,7 @@ app.set('io', io); // Make io accessible in routes via req.app.get('io')
 
 // Middleware
 app.use(cors({
-  origin: process.env.CLIENT_URL || 'http://localhost:5173',
+  origin: process.env.CLIENT_URL || 'https://annvaya.vercel.app',
   credentials: true
 }));
 app.use(express.json());
@@ -53,7 +53,7 @@ const PORT = process.env.PORT || 5000;
 connectDB().then(() => {
   httpServer.listen(PORT, () => {
     console.log(`\n🌾 Annvaya Server running on port ${PORT}`);
-    console.log(`   API:    http://localhost:${PORT}/api/health`);
-    console.log(`   Socket: ws://localhost:${PORT}\n`);
+    console.log(`   API:    https://annvaya-server.onrender.com/api/health`);
+    console.log(`   Socket: wss://annvaya-server.onrender.com\n`);
   });
 });

@@ -3,7 +3,7 @@ import { Server } from 'socket.io';
 export default function setupSocket(server) {
   const io = new Server(server, {
     cors: {
-      origin: process.env.CLIENT_URL || 'http://localhost:5173',
+      origin: process.env.CLIENT_URL || 'https://annvaya.vercel.app',
       methods: ['GET', 'POST', 'PATCH', 'PUT', 'DELETE']
     }
   });
